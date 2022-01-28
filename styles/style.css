@@ -49,7 +49,7 @@
 
 .header-section .header-showcase .brand-text-container {
     height: 300px;
-    width: 500px;
+    width: 550px;
     color: white;
     position: absolute;
     top: 20%;
@@ -61,7 +61,6 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: rgba(255, 97, 49, 0.966);
-    /* color: rgb(26, 26, 184); */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .header-section .brand-text-container .brand-header {
@@ -187,7 +186,7 @@
     text-align: center;
     border-bottom: 1px solid yellow;
     padding-bottom: 5px;
-    width: 90px;
+    width: 200px;
     margin: auto;
     margin-bottom: 15px;
 }
@@ -220,9 +219,10 @@
     text-align: center;
     border-bottom: 1px solid yellow;
     padding-bottom: 5px;
-    width: 150px;
+    width: 200px;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    word-spacing: 10px;
 }
 
 .footer-control .footer-social-links {
@@ -422,16 +422,26 @@
     }
     .footer-section .footer-control .brand-name {
         width: auto;
+        margin-bottom: 0px;
     }
     .footer-section .copyright-1 {
         display: none;
     }
     .footer-copyright-2-control.none {
         display: block;
+        line-height: 1.8;
+        width: 100%;
+        margin-left: -10px;
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 600px) {
+    .footer-section .footer-control .brand-name {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
     .header-section .brand-header {
         width: 300px;
     }
@@ -450,4 +460,13 @@
      .mobile-nav .nav-link {
          font-size: 18px;
      }
+     .footer-section .footer-control .brand-name {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .footer-section .footer-control .brand-name {
+        font-size: 18px;
+        margin-left: -10px;
+    }
 }
