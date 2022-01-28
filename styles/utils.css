@@ -1,0 +1,94 @@
+:root {
+    --primary-blue : rgb(28, 28, 185);
+}
+
+/* Tags */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f3f3f3;
+    color: black;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+html { scroll-behavior: smooth; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i {
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+/* End Tags */
+
+
+/* Classes */
+.brand-name-sp {
+    color: yellow;
+}
+.none {
+    display: none;
+}
+
+/* End of Classes */
+
+
+
+/* News */
+.news-section-container {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: white;
+}
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+.news-control {
+    margin-right: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted black;
+    border-left: 1px dotted black;
+    height: 310px;
+}
+.news-img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+.special-news-header {
+    font-weight: 600;
+    color: rgb(28, 28, 185);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.news-heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+}
+.news-heading:hover {
+    color: rgb(28, 28, 185);
+}
+
+/* End of News */
