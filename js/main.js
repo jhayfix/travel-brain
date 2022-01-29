@@ -9,25 +9,28 @@ const menuLine = document.querySelectorAll('.menu-line');
 const mobileNav = document.querySelector('#mobile-nav')
 
 
+// Jump To Top
+const toTop = document.querySelector('.jump-to-top');
+
 // Header Navbar
-aboutItem.addEventListener('click', (e) => {
-    e.preventDefault()
-    aboutItem.classList.add('active');
-    homeItem.classList.remove('active');
-    contactItem.classList.remove('active');
-})
-homeItem.addEventListener('click', (e) => {
-    e.preventDefault()
-    aboutItem.classList.remove('active');
-    homeItem.classList.add('active');
-    contactItem.classList.remove('active');
-})
-contactItem.addEventListener('click', (e) => {
-    e.preventDefault()
-    aboutItem.classList.remove('active');
-    homeItem.classList.remove('active');
-    contactItem.classList.add('active');
-})
+// aboutItem.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     aboutItem.classList.add('page-active');
+//     homeItem.classList.remove('page-active');
+//     contactItem.classList.remove('page-active');
+// })
+// homeItem.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     aboutItem.classList.remove('page-active');
+//     homeItem.classList.add('page-active');
+//     contactItem.classList.remove('page-active');
+// })
+// contactItem.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     aboutItem.classList.remove('page-active');
+//     homeItem.classList.remove('page-active');
+//     contactItem.classList.add('page-active');
+// })
 
 //  Navbar Display
 
@@ -55,3 +58,75 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 // End Header Navbar 
+
+// Scroll To Top
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
+// Auto Showcase Slides
+
+var slideShowIndex = 0;
+showSlidesFunc();
+
+function showSlidesFunc() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideShowIndex++;
+  if (slideShowIndex > slides.length) {slideShowIndex = 1}
+  slides[slideShowIndex-1].style.display = "block";
+  setTimeout(showSlidesFunc, 3500); // Change image every 2 seconds
+}
+
+
+// Manuel
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+

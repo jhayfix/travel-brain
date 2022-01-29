@@ -34,11 +34,13 @@
 /* Header Showcase */
 .header-section .header-showcase {
     width: 100vw;
-    height: 350px;
-    position: relative;
+    height: 380px;
     background-color: black;
     z-index: -10;
+    overflow: hidden;
 }
+
+/* Vid Background */
 .header-section .header-showcase .bg-video {
     position: absolute;
     object-fit: cover;
@@ -46,14 +48,23 @@
     width: 100vw;
     z-index: -5;
 }
+/* Vid Background */
+
 
 .header-section .header-showcase .brand-text-container {
-    height: 300px;
+    height: auto;
+    padding: 30px;
     width: 550px;
     color: white;
     position: absolute;
     top: 20%;
     left: 10%;
+
+    background: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: 2px solid yellow;
+    border-right: 2px solid yellow;
 }
 .header-section .brand-text-container .brand-name {
     font-size: 60px;
@@ -102,7 +113,7 @@
     min-width: 70px;
     text-align: center;
 }
-.navbar-item.active {
+.navbar-item.page-active {
     border-left: 1px solid yellow;
     border-right: 1px solid yellow;
     /* border-bottom: 1px solid yellow; */
@@ -125,6 +136,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .header-navbar .navbar-items-ul a:hover {
+    color: yellow;
+}
+.header-navbar .navbar-link.page-link-active {
     color: yellow;
 }
 /* End of Header Navbar */
@@ -279,15 +293,14 @@
     /* Header Showcase */
     .header-section .header-showcase {
         width: 100vw;
-        height: 200px;
+        height: 280px;
         position: relative;
-        overflow: hidden;
     }
     .header-section .header-showcase .brand-text-container {
         height: 200px;
         width: 400px;
         top: 15%;
-        left: 5%;
+        left: 7%;
     }
     .header-section .brand-text-container .brand-name {
         font-size: 30px;
@@ -433,11 +446,23 @@
         width: 100%;
         margin-left: -10px;
     }
+
+    .mySlides .text {
+        display: none;
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
     .footer-section .footer-control .brand-name {
         font-size: 25px;
+    }
+    .header-section .header-showcase .brand-text-container {
+        width: 330px;
+    }
+    .header-section .brand-text-container .brand-name {
+        font-size: 25px;
+        width: 90%;
     }
 }
 
@@ -462,6 +487,12 @@
      }
      .footer-section .footer-control .brand-name {
         font-size: 20px;
+    }
+
+    .header-section .header-showcase .brand-text-container {
+        width: 290px;
+        margin-left: 11px;
+        padding-left: 10px;
     }
 }
 @media only screen and (max-width: 400px) {
