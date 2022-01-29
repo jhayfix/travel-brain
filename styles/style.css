@@ -294,14 +294,16 @@
     .header-section .header-showcase {
         width: 100vw;
         height: 280px;
-        position: relative;
     }
+
     .header-section .header-showcase .brand-text-container {
         height: 200px;
         width: 400px;
-        top: 15%;
+        top: 10%;
         left: 7%;
     }
+
+    
     .header-section .brand-text-container .brand-name {
         font-size: 30px;
         line-height: 1.3;
