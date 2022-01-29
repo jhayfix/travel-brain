@@ -141,6 +141,7 @@
 .header-navbar .navbar-link.page-link-active {
     color: yellow;
 }
+
 /* End of Header Navbar */
 
 /* End of Header Section */
@@ -150,7 +151,7 @@
 
 /* Content Section */
 .content-section {
-    width: 84%;
+    width: 85%;
     margin: auto;
 }
 /* End of Content Section */
