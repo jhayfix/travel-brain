@@ -57,7 +57,8 @@
     width: 550px;
     color: white;
     position: absolute;
-    top: 20%;
+    /* top: 20%; */
+    top: 100px;
     left: 10%;
 
     background: rgba(0, 0, 0, 0.6);
